@@ -14,3 +14,30 @@ void foo(){
 ```
 
 [**Tutorial**](https://www.youtube.com/watch?v=qUDAkDvoLas)
+
+### Template
+
+ Idea is to pass data type as a parameter so that we don’t need to write same code for different data types. For example a software company may need sort() for different data types like sorting of integer or sorting of floats etc. Similary, you may have requirement of doing summation of floats and integers. Then you have normally 2 ways to do that:
+
+1. Delcare two methods like `sumInts(int a, intb)` and `sumFloats(float a, float b)`
+2. Overlaod one method with different types like `sum(int a, int b)` and sun(float  a, float b)
+
+But in either of these cases, you have to write more code. Template helps you do do this task with just 1 method. - one generic method.
+
+```c++
+
+template <typename T> T sum(T a, T b)
+{
+	return a + b;
+}
+
+
+void foo()
+{
+	cout << sum<int>(3,2);
+	cout << sum<float>(12.2, 12.3);
+	return0;	
+}
+```
+
+
