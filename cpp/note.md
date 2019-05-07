@@ -40,4 +40,41 @@ void foo()
 }
 ```
 
+### Vectors
+
+Are dynamic arrays with the aiblity to resize itself when an element is inserted and deleted, with their storage being handaled automatically by the container.
+
+
+```c++
+vector<int> myvector;
+myvector.emplace_back(1234);
+myvector.emplace_back(12345);
+
+for (std::vector<int>::iterator it = myvector.begin(); it != myvector.end(); ++it)
+  std::cout << ' ' << *it;
+```
+
+`vector::emplace_back()` is used to insert a new element into vector. 
+
+We can also use `vector::push_back()` for inserting but the difference between them is with `push_back()`, we can create an object and then insert into the vector. whereas with `emplace_back()` the object is constructed in-place.
+
+```c++
+struct aggregate {
+    int foo;
+    int bar;
+};
+
+std::vector<aggregate> v;
+
+v.emplace_back({ 42, 121 }); //  you can not do 
+v.push_back({ 42, 121 }); // can do
+```
+
+[**StackOverFlow**](https://stackoverflow.com/questions/10890653/why-would-i-ever-use-push-back-instead-of-emplace-back/28435599)
+
+
+
+
+
+
 
