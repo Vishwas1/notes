@@ -15,3 +15,25 @@ More precisely pointers `P` are recoreded in a block as hash of the previous blo
 
 > What does it mean when a blockchain abstraction is implemented in a distributed way?
 
+Theblockchain systemoften refers to the distributed protocol that implementsthe aforementioned blockchain abstraction. Due to its distributed nature andbecause it records asset transfers, the blockchain system is also commonly re-ferred to as a distributed ledger.
+
+We consider a communication graph `G = <V,E>` with nodes or processes `V` connected to each other through fixed communication links `E`.
+
+Processes can act as clients by issuing transac-tions to the system and/or servers by _mining_, the action of trying to combine transactions into a block. 
+
+For the sake of simplicity, we consider that eachprocess possesses a single account and that a transaction issued by process `pi` is a transfer of digital assets or coins from the account of the source process `pi` to the account of a destination process. `pj != pi`.
+
+Blockchain construction at node `pi`:
+
+```
+
+1. l = <Bi, Pi>, local blockchian at node pi is directed acyclic graph of blocks Bi and pointers Pi
+2. Upon reception of a new Block <Bj, Pj>
+3. Bi <- Bi U Pj
+4. Pi <- Pi U Pj
+
+```
+
+
+
+
