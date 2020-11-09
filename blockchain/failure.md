@@ -39,3 +39,4 @@ P ---------|--|---|-------------|------------>
 ```
 
 Important thing to note here is, a node is correct if it never fails. Hence Byzantine failure is more dangerous.
+
