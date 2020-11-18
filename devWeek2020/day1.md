@@ -192,6 +192,8 @@ Answer
 
 To generate JWT, the user has to use username and password. But with the refreh toke, during the same sessiong itself the jwt toke gets updates, that way user is not logged out duruing the session.
 
+![img](refreshtoken.png)
+
 
 # Graph QL 
 
