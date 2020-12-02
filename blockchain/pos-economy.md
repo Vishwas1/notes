@@ -77,7 +77,7 @@ If a validator misbehaves by, say, trying to finalizetwo blocks at the same heig
 
 - [Economics of Proof-of-Stake Payment Systems](https://pramodv.ece.illinois.edu/pubs/GKV.pdf)
 - [About VRF](https://research.nccgroup.com/2020/02/24/reviewing-verifiable-random-functions/)
-
+- [Blockchain Without Waste: Proof-of-Stake](https://sci-hub.se/10.2139/ssrn.3183935)
 
 
 
