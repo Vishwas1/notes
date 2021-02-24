@@ -45,5 +45,15 @@ As you can see informations about what all ports are open on the server.
 
 ### -D 
 
+### -A
 
+Aggresive scan
+
+
+### Zenmap tool
+
+
+### Metasploit
+
+https://www.metasploit.com/get-started
 
