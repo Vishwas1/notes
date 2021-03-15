@@ -1,0 +1,1 @@
+https://yos.io/2018/11/18/harberger-taxes/#arts-funding
