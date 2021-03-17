@@ -1,3 +1,5 @@
+const { WSAETOOMANYREFS } = require("constants")
+
 // Expensive call to fetch data
 function getData(time) {
     return new Promise((resolve, reject) => {
@@ -29,7 +31,7 @@ async function thisMethodCallTakesMoreTime() {
     console.timeEnd('compute')
 }
 
-// Good way
+// Good way: Async await way
 async function thisTakesLessTime() {
     console.log('Good way is cheap.....')
     console.time('compute-cost')
@@ -38,7 +40,19 @@ async function thisTakesLessTime() {
     console.log(await finallyComputeResult(await val1, await val2))
     console.timeEnd('compute-cost')
 }
+// Promise way
+function thisAlsoTakesLessTime() {
+    console.time('compute-cost')
+    Promise.all([getData(3000), getData(5000)]).then((values) => {
+        return finallyComputeResult(values[0], values[1])
+    }).then(res => {
+        console.log(res)
+        console.timeEnd('compute-cost')
+    })
+
+}
 
 
 // thisMethodCallTakesMoreTime() // Took 8.012s
-// thisTakesLessTime() // Took 5.005s
+thisTakesLessTime() // Took 5.005s
+    // thisAlsoTakesLessTime(); // 5.006s
