@@ -1,4 +1,4 @@
-const { createECDH } = require('crypto');
+const { createECDH, ECDH } = require('crypto');
 
 const aliceECDH = createECDH('secp256k1');
 aliceECDH.generateKeys()

@@ -1,4 +1,4 @@
-https://www.signal.org/docs/specifications/x3dh/#the-x3dh-protocol
+# Singal protocol shared key sharing &  encrypted messaging
 
 * IPKa	Alice's identity publick key
 * IPrivKa	Alice's identity private key
@@ -74,6 +74,9 @@ As the parties take turns performing DH ratchet steps, they take turns introduci
 
 
 
+## References
 
-
-https://www.signal.org/docs/specifications/doubleratchet/
+- https://www.signal.org/docs/specifications/x3dh/#the-x3dh-protocol
+- https://www.signal.org/docs/specifications/doubleratchet/
+- https://www.redshiftzero.com/signal-protocol/
+- https://www.redshiftzero.com/
